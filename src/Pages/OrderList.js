@@ -1,8 +1,9 @@
 import { Popover } from 'antd';
 import _ from 'lodash';
-import React from 'react';
+import React, { useState } from 'react';
 
 import {CiFaceSmile, CiFaceFrown, CiFaceMeh} from 'react-icons/ci';
+import DrawerBase from '../Component/DrawerBase';
 
 const contentOne = (
     <div>
@@ -30,12 +31,12 @@ const contentOne = (
     </div>
   );
 function OrderList() {
-
+    const [open, setOpen] = useState(false);
     const RenderList =()=>{
        const rand= _.random(1, 24)
        if(rand>0 && rand<10){
             return <Popover content={contentOne} title="Thông tin" trigger="hover">
-            <div className='w-24 h-16 bg-slate-100 flex justify-center items-center'>
+            <div onClick={onShow} className='w-24 h-16 bg-slate-100 flex justify-center items-center'>
               <CiFaceFrown size={30} className='text-slate-400' />
           </div>
           </Popover> 
@@ -51,8 +52,12 @@ function OrderList() {
         </div></Popover>
        }
     }
+    const onShow = () => {
+        setOpen(true);
+      };
 	return (
 		<div className='p-10'>
+            <DrawerBase open={open} setOpen={setOpen}/>
 			<div className='font-bold text-2xl'>LỊCH SÂN BÓNG</div>
 			<p className='mb-6'>Vui lòng liên hệ đặt lịch : 0923.234.2343</p>
 			<div className='flex w-full gap-1'>

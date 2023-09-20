@@ -56,10 +56,9 @@ function OrderList() {
         setOpen(true);
       };
 	return (
-		<div className='p-10'>
+		<div className='px-10 mt-5'>
             <DrawerBase open={open} setOpen={setOpen}/>
-			<div className='font-bold text-2xl'>LỊCH SÂN BÓNG</div>
-			<p className='mb-6'>Vui lòng liên hệ đặt lịch : 0923.234.2343</p>
+			
 			<div className='flex w-full gap-1'>
 				<div className='w-24 h-16 bg-slate-100 flex justify-center items-center'>
 					STT

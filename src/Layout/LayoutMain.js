@@ -19,7 +19,7 @@ const LayoutMain = () => {
 					<p className='mb-6'>Vui lòng liên hệ đặt lịch : 0923.234.2343</p>
 				</div>
 				<div className='flex items-center gap-3'>
-					<Link to={'/dat-san'}>
+					<Link to={'/'}>
 						<Button>Đặt sân</Button>
 					</Link>
 					<Link to={'/lich-su'}>

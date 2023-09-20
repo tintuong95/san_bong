@@ -64,8 +64,9 @@ function OrderList() {
 					STT
 				</div>
 				{_.range(1, 24).map((item, index) => (
-					<div className='w-24 h-16 bg-slate-100 flex justify-center items-center'>
-						{item}:30
+					<div className='w-24 h-16 text-sm bg-slate-100 flex flex-col justify-center items-center'>
+						<span>{item}:30</span>
+						<span>{item==23 ? 1:item+1}:30</span>
 					</div>
 				))}
 			</div>
